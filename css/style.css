@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.body{
+    background: url("../img/back.jpg"); 
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    /* navbar */
+    .sidenav {
+        width: 0;
+        position:fixed;
+        z-index: 9999;
+        top: 0;
+        height: 100%;
+        background-color:cyan;
+        overflow-x: hidden;
+        transition: 0.5s;
+        background: var(--ss-gray-900);
+        padding-top: 48px;
+      }
+      #write{
+          justify-content: center;
+
+      }
+      
+      .sidenav a {
+        padding: 0px 15px 15px 15px;
+        text-decoration:crimson;
+        font-size: large;
+        color:cornsilk;
+        display:block;
+        transition: 0.8s;
+      }
+      
+      .sidenav a:hover {
+        color: blue;
+      }
+      
+      .sidenav .closebtn {
+        position:relative;
+        top:auto;
+        left: 30px;
+        font-size: 40px;
+        margin-left: 50px;
+      }
+      .openbtn{
+          position: fixed;
+          top: 16px;
+          left: 16px;
+          z-index: 50;
+          font-size:30px;
+          cursor:pointer;
+      }
+      .openbtn:hover{
+        color: var(--ss-main-300);
+      }
+      .ss_profile_image{
+        background: url("../img/pro.jpg");
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: 15%;
+        
+      }
+      #navbackdrop{
+          height: 100%;
+          width: 100%;
+          position: fixed;
+          top: 0;
+          background: var(--ss-gray-500);
+          opacity: 0.5;
+          z-index: 10;
+          display: none;
+      }
+      
+      @media (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+      }
+      @media (min-width: 768px) {
+          .sidenav{
+            height: 3rem;
+            padding-top: 0;
+            width:100% !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background:none;
+          }
+        .closebtn{
+            display: none !important;
+        }
+       
+        .openbtn {
+            display: none;
+        }
+        .sidenav a {
+              display: inline-block;
+          }
+        }
+      /* navbar ends */
+
+#scoreBox{
+    position: absolute;
+    top: 9px;
+    right: 200px;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+}
+
+#hiscoreBox{
+    position: absolute;
+    top: 59px;
+    right: 140px;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+}
+
+#board{
+    background: linear-gradient(rgb(170, 236, 170), rgb(236, 236, 167));
+    width:90vmin;
+    height:90vmin;
+    border: 0px solid black;
+    display:grid;
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+}
+
+.head{
+    background: linear-gradient(rgb(238, 240, 124), rgb(228, 228, 129));
+    border: 2px solid rgb(34, 4, 34); 
+    transform: scale(1.02);
+    border-radius: 9px;
+}
+
+.snake{
+    background-color:darkred;
+    border: .25vmin solid white;
+    border-radius: 12px;
+}
+
+.food{
+    background: linear-gradient(blue, black);
+    border: .21vmin solid black;
+    border-radius: 8px;
+}

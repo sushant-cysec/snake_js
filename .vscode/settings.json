@@ -1,0 +1,7 @@
+{
+    "html.format.endWithNewline": true,
+    "html.format.indentInnerHtml": true,
+    "html.format.templating": true,
+    "html.format.indentHandlebars": true,
+    "C_Cpp.autocompleteAddParentheses": true
+}
